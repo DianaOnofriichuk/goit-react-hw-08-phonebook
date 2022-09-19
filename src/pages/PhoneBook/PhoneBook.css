@@ -1,0 +1,10 @@
+.phonebook {
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: beige;
+}
+
+.title {
+  color: #282c34;
+}

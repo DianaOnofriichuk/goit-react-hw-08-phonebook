@@ -1,0 +1,21 @@
+.contacts-item {
+  font-size: 18px;
+  color: rgb(62, 59, 59);
+}
+.contacts-item:not(not:last-child) {
+  margin-bottom: 15px;
+}
+.contacts-number {
+  margin-right: 15px;
+  color: black;
+}
+.edit-btn {
+  margin-right: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 6px;
+  background-color: transparent;
+}
