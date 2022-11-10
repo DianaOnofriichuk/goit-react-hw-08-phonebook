@@ -1,6 +1,6 @@
 .header {
+  background-image: radial-gradient(at center, #dbdaff 20%, #f6daec 50%);
   height: 50px;
-  background: rgb(255, 254, 254);
   padding: 15px;
   margin-bottom: 40px;
   display: flex;

@@ -1,25 +1,23 @@
-import './Forms.css'
-import Loader from '../Loader/Loader'
-import { useGetContactsQuery, useAddContactMutation } from '../../Redux/reducer'
+import "./Forms.css";
+import Loader from "../Loader/Loader";
+import {
+  useGetContactsQuery,
+  useAddContactMutation,
+} from "../../Redux/reducer";
 
 const ContactForm = () => {
-  const { data } = useGetContactsQuery()
-  const [addContact, { isLoading }] = useAddContactMutation()
+  const [addContact, { isLoading }] = useAddContactMutation();
 
   const handleSubmit = (evt) => {
-    evt.preventDefault()
-    const form = evt.currentTarget
-    const newName = form.elements.name.value
-    const newNumber = form.elements.number.value
-    const contact = { name: newName, number: newNumber }
+    evt.preventDefault();
+    const form = evt.currentTarget;
+    const newName = form.elements.name.value;
+    const newNumber = form.elements.number.value;
+    const contact = { name: newName, number: newNumber };
 
-    if (data.find((prevContact) => prevContact.name === contact.name)) {
-      alert(`${contact.name} is already in contacts`)
-    } else {
-      addContact(contact)
-    }
-    form.reset()
-  }
+    addContact(contact);
+    form.reset();
+  };
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input
@@ -45,7 +43,7 @@ const ContactForm = () => {
         Add contact
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

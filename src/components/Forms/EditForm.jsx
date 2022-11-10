@@ -1,17 +1,17 @@
-import './Forms.css'
+import "./Forms.css";
 
 const EditForm = ({ contact, onEdit }) => {
   const handleSubmit = (evt) => {
-    evt.preventDefault()
-    const form = evt.currentTarget
-    const newName = form.elements.name.value
-    const newNumber = form.elements.number.value
-    const newContact = { id: contact.id, name: newName, number: newNumber }
+    evt.preventDefault();
+    const form = evt.currentTarget;
+    const newName = form.elements.name.value;
+    const newNumber = form.elements.number.value;
+    const newContact = { id: contact._id, name: newName, number: newNumber };
 
-    onEdit(newContact)
+    onEdit(newContact);
 
-    form.reset()
-  }
+    form.reset();
+  };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -38,6 +38,6 @@ const EditForm = ({ contact, onEdit }) => {
         Edit
       </button>
     </form>
-  )
-}
-export default EditForm
+  );
+};
+export default EditForm;

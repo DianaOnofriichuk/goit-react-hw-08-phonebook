@@ -1,21 +1,25 @@
-import './Forms.css'
-import { useDispatch } from 'react-redux'
-import { registration } from '../../Redux/actions'
+import "./Forms.css";
+import { useDispatch } from "react-redux";
+import { registration } from "../../Redux/actions";
 
 const RegistrationForm = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.currentTarget
-    const name = form.elements.name.value
-    const email = form.elements.email.value
-    const password = form.elements.password.value
-    const user = { name, email, password }
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+    if (password.length < 6) {
+      alert("password must be longer than 6 symbols");
+    }
+    const user = { name, email, password };
 
-    dispatch(registration(user))
-    form.reset()
-  }
+    dispatch(registration(user));
+
+    form.reset();
+  };
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input
@@ -43,6 +47,6 @@ const RegistrationForm = () => {
         Submit
       </button>
     </form>
-  )
-}
-export default RegistrationForm
+  );
+};
+export default RegistrationForm;

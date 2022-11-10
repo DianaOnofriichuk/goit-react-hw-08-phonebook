@@ -1,11 +1,17 @@
+.contacts-list {
+  margin-bottom: 35px;
+}
 .contacts-item {
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 24px;
   color: rgb(62, 59, 59);
 }
 .contacts-item:not(not:last-child) {
   margin-bottom: 15px;
 }
 .contacts-number {
+  font-size: 17px;
+  font-weight: 400;
   margin-right: 15px;
   color: black;
 }
@@ -18,4 +24,18 @@
   right: 15px;
   border-radius: 6px;
   background-color: transparent;
+}
+.favotite-btn {
+  margin-left: 10px;
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.favorite-icon {
+  fill: rgb(186, 189, 192);
+  width: 30px;
+  height: 30px;
 }
